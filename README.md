@@ -1,4 +1,4 @@
-# idera-os
+# The Lazy Dev Otaku Vue Ops
 
 ## Project setup
 ```

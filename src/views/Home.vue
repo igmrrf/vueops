@@ -3,12 +3,19 @@
     <h1>All Destinations</h1>
     <div class="destination">
       <div v-for="destination in destinations" :key="destination.name">
-        <router-link :to="{name: 'DestinationDetails', params:{id:destination.id}}">
-          <h2>{{destination.name}}</h2>
+        <router-link
+          :to="{ name: 'DestinationDetails', params: { id: destination.id } }"
+        >
+          <h2>{{ destination.name }}</h2>
         </router-link>
         <figure>
-          <router-link :to="{name: 'DestinationDetails', params:{id:destination.id}}">
-            <img :src="require(`@/assets/${destination.image}`)" :alt="destination.name" />
+          <router-link
+            :to="{ name: 'DestinationDetails', params: { id: destination.id } }"
+          >
+            <img
+              :src="require(`@/assets/${destination.image}`)"
+              :alt="destination.name"
+            />
           </router-link>
         </figure>
       </div>
@@ -16,7 +23,7 @@
   </div>
 </template>
 <script>
-import store from "@/store.js";
+import store from "@/store/store.js";
 export default {
   name: "home",
   data() {
@@ -27,7 +34,7 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style scoped>
 .home {
   max-width: 1400px;
   margin: 0 auto;
